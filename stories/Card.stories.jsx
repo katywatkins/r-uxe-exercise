@@ -38,6 +38,7 @@ WithImage.args = {
   children: cardText,
   image: <img src={london} alt="Corner shop in London" />,
 };
+
 export const NoImage = Template.bind({});
 NoImage.args = {
   children: cardText,
