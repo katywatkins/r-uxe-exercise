@@ -1,5 +1,28 @@
 @import '../variables.scss';
 
+@mixin section-styles {
+    flex-basis: 50%;
+}
+
 .card {
     background: $card-background;
+    display: flex;
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    
+}
+
+.card__image {
+    width: 47%;
+    @include section-styles;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.card__content {
+    padding: $spacing-md;
+    flex-grow: 1;
+    @include section-styles;
 }
