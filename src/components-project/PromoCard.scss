@@ -1,0 +1,13 @@
+@import '../variables.scss';
+
+.promo-card--larger {
+    .blurb__title {
+        font-size: 30px;
+        line-height: 38px;
+    }
+    .card__content {
+        padding: $spacing-xxl;
+        display: flex;
+        align-items: center;
+    }
+}

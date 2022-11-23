@@ -6,15 +6,15 @@ import './Blurb.scss';
 const Blurb = ({
   mainTitle,
   children,
-  fontSize,
+  size,
   date,
   callout,
 }) => {
   const formattedDate = dayjs(date).format('MMMM D, YYYY');
   return (
-    <div className="blurb" style={{ fontSize: `${fontSize}rem` }}>
+    <div className="blurb" style={{ fontSize: `${size}rem` }}>
       {callout && <p className="secondary-text blurb__callout">{callout}</p> }
-      { mainTitle && <h2 className="title-text">{mainTitle}</h2> }
+      { mainTitle && <h2 className="title-text blurb__title">{mainTitle}</h2> }
       { date && <time dateTime={date} className="blurb__date default-text">{formattedDate}</time> }
       {children}
     </div>
@@ -24,7 +24,7 @@ const Blurb = ({
 Blurb.propTypes = {
   mainTitle: PropTypes.string,
   children: PropTypes.node,
-  fontSize: PropTypes.number,
+  size: PropTypes.number,
   date: PropTypes.string,
   callout: PropTypes.string,
 };
@@ -32,7 +32,7 @@ Blurb.propTypes = {
 Blurb.defaultProps = {
   mainTitle: null,
   children: null,
-  fontSize: 1,
+  size: 1,
   date: null,
   callout: null,
 };

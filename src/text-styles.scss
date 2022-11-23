@@ -1,0 +1,19 @@
+@import './variables.scss';
+
+.secondary-text {
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    color: $color__text-secondary;
+}
+
+.title-text {
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    color: $color__text-default;
+}
+
+.default-text {
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    color: $color__text-default;
+    line-height: $spacing-lg;
+    font-size: 1em;
+}
+

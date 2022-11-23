@@ -1,5 +1,25 @@
-@import '../index.scss';
+@import '../text-styles.scss';
+@import '../variables.scss';
 
 .blurb__callout {
     text-transform: uppercase;
+    font-size: $fs-tertiary-text;
+    font-size: 14px; //this doesn't scale in the mockup but maybe should?
+    margin: 0;
+    margin-bottom: 6px;
+    letter-spacing: .5px;
+}
+
+.blurb__date {
+    font-size: $fs-subtitle;
+    font-weight: 700;
+    margin: 0;
+
+}
+
+.blurb__title {
+    margin: 0;
+    letter-spacing: -0.3px;
+    margin-bottom: 5px;
+    line-height: 31px;
 }

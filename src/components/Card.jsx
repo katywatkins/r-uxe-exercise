@@ -6,12 +6,21 @@ const Card = ({
   children,
   image,
   imageOverlayText,
-  fontSize,
+  imageOverlayBorderColor,
+  size,
+  className,
 }) => (
-  <div className="card" style={{ fontSize: `${fontSize}rem` }}>
+  <div className={`${className} card`} style={{ fontSize: `${size}rem` }}>
     {image && (
     <div className="card__image">
-      { imageOverlayText && <span className="card__image__overlay">{imageOverlayText}</span> }
+      { imageOverlayText && (
+      <span
+        className="card__image__overlay"
+        style={{ borderLeft: `5px solid ${imageOverlayBorderColor}` }}
+      >
+        {imageOverlayText}
+      </span>
+      ) }
       {' '}
       {image}
       {' '}
@@ -29,13 +38,15 @@ Card.propTypes = {
   /** Image displays on the left side of the card */
   image: PropTypes.node,
   imageOverlayText: PropTypes.string,
-  fontSize: PropTypes.number,
+  imageOverlayBorderColor: PropTypes.string,
+  size: PropTypes.number,
 };
 
 Card.defaultProps = {
   children: null,
   image: null,
   imageOverlayText: null,
-  fontSize: 1,
+  imageOverlayBorderColor: '#32C5FF',
+  size: 1,
 };
 export default Card;
