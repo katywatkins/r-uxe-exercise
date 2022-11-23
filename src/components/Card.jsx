@@ -5,10 +5,13 @@ import './Card.scss';
 const Card = ({
   children,
   image,
+  imageOverlayText,
+  fontSize,
 }) => (
-  <div className="card">
+  <div className="card" style={{ fontSize: `${fontSize}rem` }}>
     {image && (
     <div className="card__image">
+      { imageOverlayText && <span className="card__image__overlay">{imageOverlayText}</span> }
       {' '}
       {image}
       {' '}
@@ -25,10 +28,14 @@ Card.propTypes = {
   children: PropTypes.node,
   /** Image displays on the left side of the card */
   image: PropTypes.node,
+  imageOverlayText: PropTypes.string,
+  fontSize: PropTypes.number,
 };
 
 Card.defaultProps = {
   children: null,
   image: null,
+  imageOverlayText: null,
+  fontSize: 1,
 };
 export default Card;

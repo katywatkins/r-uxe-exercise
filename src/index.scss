@@ -6,3 +6,22 @@ html,body {
     background: $page-background;
 }
 
+h1 {
+    font-weight: 100;
+}
+
+// don't import the stuff above, it's turning story backgrounds grey!
+.secondary-text {
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    color: $color__text-secondary;
+}
+
+.title-text {
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    color: $color__text-default;
+}
+
+.default-text {
+    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
+    color: $color__text-default;
+}

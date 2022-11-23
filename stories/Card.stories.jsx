@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Card from '../src/components/Card';
+import Blurb from '../src/components/Blurb';
 import london from '../src/img/london-img.jpg';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
@@ -16,25 +17,33 @@ export default {
 };
 
 const cardText = (
-  <div>
-    <p>Register Now</p>
-    <h2>London, England</h2>
-    <time dateTime="2020-04-15">April 15, 2020</time>
-    <p>
+  <Blurb
+    date="2020-04-15"
+    mainTitle="London, England"
+    callout="Register Now"
+  >
+    <p className="default-text">
       Ut placet, inquam tum dicere exorsus est laborum et via procedat oratio
       quaerimus igitur, quid et caritatem, quae sine causa? quae fuerit causa,
       mox video; interea hoc epicurus in culpa, qui blanditiis praesentium
       voluptatum adipiscendarum causa aut officiis debits aut fugit, sed uti
       oratione perpetua.
     </p>
-  </div>
+  </Blurb>
 );
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const Template = (args) => <Card {...args} />;
 
-export const WithImage = Template.bind({});
+export const WithEverything = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
-WithImage.args = {
+WithEverything.args = {
+  children: cardText,
+  image: <img src={london} alt="Corner shop in London" />,
+  imageOverlayText: 'International',
+};
+
+export const WithJustImage = Template.bind({});
+WithJustImage.args = {
   children: cardText,
   image: <img src={london} alt="Corner shop in London" />,
 };
