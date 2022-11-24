@@ -8,7 +8,7 @@
     @include standard-font-family;
     color: variables.$color__text-default;
     font-size: variables.$fs-title;
-    font-weight: 100;
+    font-weight: variables.$light;
     margin: 0;
 }
 
@@ -17,6 +17,7 @@
     color: variables.$color__text-default;
     letter-spacing: -0.3px;
     line-height: 31px;
+    font-weight: variables.$bold;
 }
 
 .callout-text {
@@ -25,4 +26,5 @@
     text-transform: uppercase;
     font-size: variables.$fs-tertiary-text;
     letter-spacing: .5px;
+    font-weight: variables.$semi-bold;
 }

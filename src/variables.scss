@@ -5,6 +5,9 @@ $mid-grey: #888;
 $white: #fff;
 $yellow: #F7B500;
 $blue: #32C5FF;
+$light-blue: #98e2ff;
+$dark-blue: #003c54; // AAA on $light-blue
+$blue-text: #005f84; // AAA on white
 
 $page-background: $light-grey;
 $card-background: $white;
@@ -25,6 +28,12 @@ $spacing-xl: 1.875em; //   16 x 1.875 = 30px
 $fs-title: 3em; // 16 x 3 = 48px
 $fs-card-title: 1.875em; // 16 x 1.875 = 30px
 $fs-tertiary-text: .875em;
+
+// font weights
+$light: 300;
+$normal: 400;
+$semi-bold: 600;
+$bold: 700;
 
 // breakpoints
 $bp-md: 700px;

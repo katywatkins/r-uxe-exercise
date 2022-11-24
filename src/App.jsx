@@ -11,8 +11,10 @@ const alertText = 'I bet if this was a fully functional site it would need to na
 
 const App = () => (
   <>
-    <h1 className="title-text app__title">World Traveler</h1>
-    <div className="app__body">
+    <header>
+      <h1 className="title-text app__title">World Traveler</h1>
+    </header>
+    <main className="app__body">
       <PromoCard
         className="app__main-promo"
         largerPromo
@@ -57,7 +59,7 @@ const App = () => (
         buttonText="Register for Singapore"
         onButtonClick={() => alert(alertText)}
       />
-    </div>
+    </main>
   </>
 );
 

@@ -7,31 +7,29 @@
     font-weight: 600;
     font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
     font-size: 1em;
+    transition: background-color 0.3s ease;
+
 }
 
-@mixin button-styles($background) {
-    background: variables.$background;
-    border: 1px solid darken(variables.$background, 5);
+@mixin button-color-styles($background, $border, $text, $hover-background) {
+    background: $background;
+    border: 2px solid $border;
+    color: $text;
     &:hover {
-        background: lighten(variables.$background, 15);
+        background: $hover-background;
+    }
+
+    &:active {
+        box-shadow: inset 0 0 5px darken($hover-background, 25);
     }
 }
 
 .button--primary {
-    background: variables.$yellow;
-    border: 2px solid darken(variables.$yellow, 5);
-    &:hover {
-        background: lighten(variables.$yellow, 15);
-    }
+    @include button-color-styles(variables.$light-blue, variables.$blue, variables.$dark-blue, darken(variables.$light-blue, 10));
 }
 
 .button--secondary, .button--tertiary {
-    background: none;
-    border: 2px solid darken(variables.$blue, 30);
-    color: darken(variables.$blue, 30);
-    &:hover {
-        background: lighten(variables.$blue, 35);
-    }
+    @include button-color-styles(none, variables.$blue-text, variables.$blue-text, lighten(variables.$blue, 35));
 }
 
 .button--tertiary {
