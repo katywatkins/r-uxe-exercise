@@ -1,25 +1,31 @@
-@import '../text-styles.scss';
-@import '../variables.scss';
+@use '../variables';
+
+.blurb {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
 
 .blurb__callout {
     text-transform: uppercase;
-    font-size: $fs-tertiary-text;
+    font-size: variables.$fs-tertiary-text;
     font-size: 14px; //this doesn't scale in the mockup but maybe should?
     margin: 0;
     margin-bottom: 6px;
     letter-spacing: .5px;
 }
 
+.blurb__title {
+    margin-bottom: 5px;
+}
+
 .blurb__date {
-    font-size: $fs-subtitle;
+    font-size: variables.$fs-tertiary-text;
     font-weight: 700;
     margin: 0;
-
+    margin-bottom: 5px; //
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
-.blurb__title {
-    margin: 0;
-    letter-spacing: -0.3px;
-    margin-bottom: 5px;
-    line-height: 31px;
-}

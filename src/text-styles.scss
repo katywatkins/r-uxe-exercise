@@ -1,19 +1,27 @@
-@import './variables.scss';
+@use './variables';
 
-.secondary-text {
+@mixin standard-font-family {
     font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
-    color: $color__text-secondary;
 }
 
 .title-text {
-    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
-    color: $color__text-default;
+    @include standard-font-family;
+    color: variables.$color__text-default;
+    font-size: variables.$fs-title;
+    font-weight: 100;
+    padding: 0;
+    margin: 0;
 }
 
-.default-text {
-    font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
-    color: $color__text-default;
-    line-height: $spacing-lg;
-    font-size: 1em;
+.card-title-text {
+    @include standard-font-family;
+    color: variables.$color__text-default;
+    letter-spacing: -0.3px;
+    line-height: 31px;
+    margin: 0;
 }
 
+.secondary-text {
+    @include standard-font-family;
+    color: variables.$color__text-secondary;
+}

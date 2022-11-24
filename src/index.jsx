@@ -8,9 +8,11 @@ import singapore from './img/singapore-img.jpg';
 
 import './index.scss';
 
+const alertText = 'I bet if this was a fully functional site it would need to navigate to another page, in which case the button should probably be link.';
+
 const App = () => (
   <>
-    <h1 className="default-text title">World Traveler</h1>
+    <h1 className="title-text app__title">World Traveler</h1>
     <div className="app__body">
       <PromoCard
         className="main-promo"
@@ -27,30 +29,34 @@ const App = () => (
             voluptatum adipiscendarum causa aut officiis debits aut fugit, sed uti
             oratione perpetua."
         buttonText="Register for London"
-        onButtonClick={() => alert('I bet if this was a real, functional site this would naviate to another page, in which case the button should probably be link.')}
+        onButtonClick={() => alert(alertText)}
       />
 
       <PromoCard
         className="smaller-card"
         imgSource={atlanta}
-        imgAltText="London corner buildling"
+        imgAltText="Atlanta"
         imageOverlayText="Domestic"
         imageOverlayBorderColor="#32C5FF"
-        date="2020-04-15"
+        date="2019-03-10"
         mainTitle="Atlanta, GA"
         callout="Register Now"
         text="Torquatos nostros? quos tu paulo ante cum soluta nobis est."
+        buttonText="Register for Atlanta"
+        onButtonClick={() => alert(alertText)}
       />
 
       <PromoCard
         className="smaller-card"
         imgSource={singapore}
-        imgAltText="Atlanta skyline"
+        imgAltText="Singapore skyline"
         imageOverlayText="International"
-        date="2020-04-15"
-        mainTitle="London, England"
-        callout="Register Now"
+        date="2020-02-15"
+        mainTitle="Singapore"
+        callout="3 Spots Left!"
         text="Primum igitur, inquit, sic agam, ut aliquid ex eo delectu."
+        buttonText="Register for Singapore"
+        onButtonClick={() => alert(alertText)}
       />
     </div>
   </>

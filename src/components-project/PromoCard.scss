@@ -1,4 +1,4 @@
-@import '../variables.scss';
+@use '../variables';
 
 .promo-card--larger {
     .blurb__title {
@@ -6,8 +6,18 @@
         line-height: 38px;
     }
     .card__content {
-        padding: $spacing-xxl;
+        //padding: $spacing-xxl;
         display: flex;
         align-items: center;
+
+        .promo-card__text {
+            line-height: 28px;
+        }
     }
 }
+
+.promo-card__text {
+    margin-top: 1px;
+    line-height: 20px;
+}
+

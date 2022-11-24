@@ -1,15 +1,15 @@
-@import '../variables.scss';
+@use '../variables';
 
 @mixin section-styles {
     flex-basis: 50%;
 }
 
 .card {
-    background: $card-background;
+    background: variables.$card-background;
     display: flex;
     font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
     flex-direction: column;
-    @media (min-width: $bp-md) {
+    @media (min-width: variables.$bp-md) {
         flex-direction: row;
     }
 }
@@ -24,21 +24,21 @@
         object-fit: cover;
     }
 
-    @media (min-width: $bp-md) {
+    @media (min-width: variables.$bp-md) {
         width: 47%;
         max-height: unset;
     }
 }
 
 .card__content {
-    padding: $spacing-lg; // should be 30px when big, 20 when small
+    padding: variables.$spacing-lg; // should be 30px when big, 20 when small
     flex-grow: 1;
     @include section-styles;
 }
 
 .card__image__overlay { // not using em sizing because these should stay consistent even when everything else scales
-    background: $card-background;
-    border-left: 5px solid $yellow; // this gets overridden via the component js, but
+    background: variables.$card-background;
+    border-left: 5px solid variables.$yellow; // this gets overridden via the component js, but
     display: inline-block;
     position: absolute;
     left: -5px;

@@ -33,11 +33,11 @@ const PromoCard = ({
       callout={callout}
       size={largerPromo ? 1.125 : 1}
     >
-      <p className="default-text">
+      <p className="default-text promo-card__text">
         {text}
       </p>
       {/* below should be a function that gets tested */}
-      {onButtonClick && buttonText && <Button onClick={onButtonClick} text={buttonText} /> }
+      {onButtonClick && buttonText && <Button onClick={onButtonClick} text={buttonText} type={largerPromo ? 'primary' : 'tertiary'} /> }
     </Blurb>
   </Card>
 );

@@ -17,3 +17,10 @@ Primary.args = {
   text: 'Book your London trip',
   onClick: () => alert('In reality this would probably go to another page to buy tickets, in which case this should be a link'),
 };
+
+export const Secondary = Template.bind({});
+Secondary.args = {
+  text: 'Book your London trip',
+  type: 'secondary',
+  onClick: () => alert('In reality this would probably go to another page to buy tickets, in which case this should be a link'),
+};
