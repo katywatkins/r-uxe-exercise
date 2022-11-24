@@ -13,24 +13,18 @@ $color__text-default: $black;
 $color__text-secondary: $mid-grey;
 
 // spacing
-$spacing-xs: .25em;
-$spacing-xs-sm: .375; // 16 x .375 = 6px\
-
- // 10px
+$spacing-xxs: .25em;
+$spacing-xs: .325em; // 16 x .375 = 6px
 $spacing-sm: .5em; // 8px
-$spacing-mdl: .625em; // 48 x .625 = 30px
+$spacing-sm-md: .625em; // 48 x .625 = 30px
 $spacing-md: 1em; // 16px
 $spacing-lg: 1.25em; // 16 x 1.25 = 20px
-$spacing-xxl: 1.875em; //   16 x 1.875 = 30px
+$spacing-xl: 1.875em; //   16 x 1.875 = 30px
 
 // font sizes
-$fs-title: 3em;
-$fs-card-title: 1.875em;
-$fs-subtitle: 1em;
+$fs-title: 3em; // 16 x 3 = 48px
+$fs-card-title: 1.875em; // 16 x 1.875 = 30px
 $fs-tertiary-text: .875em;
-$fs-paragraph: 1.125em;
 
 // breakpoints
-
-$bp-sm: 500px;
 $bp-md: 700px;

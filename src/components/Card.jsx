@@ -40,6 +40,7 @@ Card.propTypes = {
   imageOverlayText: PropTypes.string,
   imageOverlayBorderColor: PropTypes.string,
   size: PropTypes.number,
+  className: PropTypes.string,
 };
 
 Card.defaultProps = {
@@ -48,5 +49,6 @@ Card.defaultProps = {
   imageOverlayText: null,
   imageOverlayBorderColor: '#32C5FF',
   size: 1,
+  className: '',
 };
 export default Card;

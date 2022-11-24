@@ -51,6 +51,10 @@ PromoCard.propTypes = {
   largerPromo: PropTypes.bool,
   text: PropTypes.string.isRequired,
   imageOverlayBorderColor: PropTypes.string,
+  date: PropTypes.string,
+  callout: PropTypes.string,
+  className: PropTypes.string,
+  imageOverlayText: PropTypes.string,
 };
 
 PromoCard.defaultProps = {
@@ -58,6 +62,10 @@ PromoCard.defaultProps = {
   buttonText: null,
   largerPromo: false,
   imageOverlayBorderColor: null,
+  date: null,
+  callout: null,
+  className: '',
+  imageOverlayText: null,
 };
 
 export default PromoCard;

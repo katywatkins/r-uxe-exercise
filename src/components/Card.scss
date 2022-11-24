@@ -1,10 +1,7 @@
 @use '../variables';
 
-@mixin section-styles {
-    flex-basis: 50%;
-}
-
 .card {
+    box-sizing: border-box;
     background: variables.$card-background;
     display: flex;
     font-family: Source Sans Pro, Helvetica, Arial, sans-serif;
@@ -16,8 +13,7 @@
 
 .card__image {
     position: relative;
-    max-height: 130px;
-    @include section-styles;
+    max-height: 130px; // stops cards from getting unaligned when things shift for mobile
     img {
         width: 100%;
         height: 100%;
@@ -25,20 +21,21 @@
     }
 
     @media (min-width: variables.$bp-md) {
-        width: 47%;
+        width: 52.8%; // magic number hack for vertical alignment between cards, this should be 47% based on the mockup
         max-height: unset;
     }
 }
 
 .card__content {
-    padding: variables.$spacing-lg; // should be 30px when big, 20 when small
-    flex-grow: 1;
-    @include section-styles;
+    padding: variables.$spacing-lg;
+    @media (min-width: variables.$bp-md) {
+        width: 50%; // magic number hack for vertical alignment between cards, this should be 53% based on the mockup
+    }
 }
 
-.card__image__overlay { // not using em sizing because these should stay consistent even when everything else scales
+.card__image__overlay { // not using ems because these should stay consistent even if the card content scales up or down
     background: variables.$card-background;
-    border-left: 5px solid variables.$yellow; // this gets overridden via the component js, but
+    border-left: 5px solid variables.$yellow; // this can be overridden in the Card component
     display: inline-block;
     position: absolute;
     left: -5px;

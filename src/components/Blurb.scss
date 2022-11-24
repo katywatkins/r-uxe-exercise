@@ -7,24 +7,17 @@
 }
 
 .blurb__callout {
-    text-transform: uppercase;
-    font-size: variables.$fs-tertiary-text;
-    font-size: 14px; //this doesn't scale in the mockup but maybe should?
-    margin: 0;
-    margin-bottom: 6px;
-    letter-spacing: .5px;
+    margin: 0 0 6px 0;
 }
 
 .blurb__title {
-    margin-bottom: 5px;
+    margin: 0 0 variables.$spacing-xxs 0;
 }
 
 .blurb__date {
     font-size: variables.$fs-tertiary-text;
     font-weight: 700;
-    margin: 0;
-    margin-bottom: 5px; //
-    line-height: 20px;
+    margin: 0 0 variables.$spacing-xs 0;
     letter-spacing: 1px;
     text-transform: uppercase;
 }

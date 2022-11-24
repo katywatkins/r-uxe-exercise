@@ -1,23 +1,23 @@
 @use '../variables';
 
+.promo-card__text {
+    margin-top: 0;
+}
+
 .promo-card--larger {
     .blurb__title {
         font-size: 30px;
-        line-height: 38px;
     }
     .card__content {
-        //padding: $spacing-xxl;
+        padding: variables.$spacing-xl;
         display: flex;
         align-items: center;
-
+        
         .promo-card__text {
             line-height: 28px;
         }
     }
+    .card__image {
+        max-height: unset;
+    }
 }
-
-.promo-card__text {
-    margin-top: 1px;
-    line-height: 20px;
-}
-

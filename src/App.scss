@@ -1,5 +1,6 @@
-@use 'variables';
 @use 'text-styles'; // ensures font styles are present within the whole app
+
+@use 'variables';
 
 $max-page-width: 1170px;
 
@@ -21,17 +22,18 @@ html,body {
 
 .app__title {
     align-self: flex-start;
-    margin-bottom: variables.$spacing-mdl;
+    margin-bottom: variables.$spacing-sm-md;
 }
 
 .app__body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    gap: variables.$spacing-xxl;
+    gap: calc(variables.$spacing-xl);
 }
 
-.main-promo {
+.app__main-promo {
     grid-column-start: 1;
     grid-column-end: 3;
+
 }

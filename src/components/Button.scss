@@ -12,7 +12,6 @@
 @mixin button-styles($background) {
     background: variables.$background;
     border: 1px solid darken(variables.$background, 5);
-
     &:hover {
         background: lighten(variables.$background, 15);
     }
@@ -21,7 +20,6 @@
 .button--primary {
     background: variables.$yellow;
     border: 2px solid darken(variables.$yellow, 5);
-
     &:hover {
         background: lighten(variables.$yellow, 15);
     }
