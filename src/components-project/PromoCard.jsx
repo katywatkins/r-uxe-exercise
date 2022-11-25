@@ -36,7 +36,7 @@ const PromoCard = ({
       <p className="default-text promo-card__text">
         {text}
       </p>
-      {/* below should be a function that gets tested */}
+      {/* below would ideally be a function that gets tested */}
       {onButtonClick && buttonText && <Button onClick={onButtonClick} text={buttonText} type={largerPromo ? 'primary' : 'tertiary'} /> }
     </Blurb>
   </Card>
