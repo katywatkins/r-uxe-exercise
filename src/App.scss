@@ -1,5 +1,4 @@
 @use 'text-styles'; // ensures font styles are present within the whole app
-
 @use 'variables';
 
 $max-page-width: 1170px;
@@ -20,8 +19,12 @@ html,body {
     max-width: $max-page-width;
 }
 
-.app__title {
+.app__header {
     align-self: flex-start;
+    margin-top: calc(variables.$spacing-xl * 2);
+}
+
+.app__title {
     margin-bottom: variables.$spacing-sm-md;
 }
 

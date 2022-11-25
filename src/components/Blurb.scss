@@ -1,4 +1,5 @@
 @use '../variables';
+@use '../text-styles.scss';
 
 .blurb {
     display: flex;
@@ -7,7 +8,7 @@
 }
 
 .blurb__callout {
-    margin: 0 0 6px 0;
+    margin: 0 0 variables.$spacing-sm 0;
 }
 
 .blurb__title {
@@ -15,6 +16,7 @@
 }
 
 .blurb__date {
+    @include text-styles.standard-font-family;
     font-size: variables.$fs-tertiary-text;
     font-weight: variables.$bold;
     margin: 0 0 variables.$spacing-xs 0;
