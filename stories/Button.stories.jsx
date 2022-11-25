@@ -1,6 +1,9 @@
+/* eslint-disable no-alert */
 import React from 'react';
 
 import Button from '../src/components/Button';
+
+const alertText = 'Just validating that something happens when this is clicked';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -15,19 +18,19 @@ export const Primary = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Primary.args = {
   text: 'Book your London trip',
-  onClick: () => alert('In reality this would probably go to another page to buy tickets, in which case this should be a link'),
+  onClick: () => alert(alertText),
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   text: 'Book your London trip',
   type: 'secondary',
-  onClick: () => alert('In reality this would probably go to another page to buy tickets, in which case this should be a link'),
+  onClick: () => alert(alertText),
 };
 
 export const Tertiary = Template.bind({});
 Tertiary.args = {
   text: 'Book your London trip',
   type: 'tertiary',
-  onClick: () => alert('In reality this would probably go to another page to buy tickets, in which case this should be a link'),
+  onClick: () => alert(alertText),
 };

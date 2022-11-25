@@ -10,4 +10,12 @@ module.exports = {
   env: {
     browser: true,
   },
+  overrides: [
+    {
+      files: ['*.test.js', '**/*.test.js', '*.test.jsx', '**/*.test.jsx'],
+      rules: {
+        'no-undef': ['off'],
+      },
+    },
+  ],
 };

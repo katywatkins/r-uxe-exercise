@@ -30,6 +30,7 @@ const App = () => (
             voluptatum adipiscendarum causa aut officiis debits aut fugit, sed uti
             oratione perpetua."
         buttonText="Register for London"
+        // eslint-disable-next-line
         onButtonClick={() => alert(alertText)}
       />
 
@@ -44,6 +45,7 @@ const App = () => (
         callout="Register Now"
         text="Torquatos nostros? quos tu paulo ante cum soluta nobis est."
         buttonText="Register for Atlanta"
+        // eslint-disable-next-line
         onButtonClick={() => alert(alertText)}
       />
 
@@ -57,6 +59,7 @@ const App = () => (
         callout="3 Spots Left!"
         text="Primum igitur, inquit, sic agam, ut aliquid ex eo delectu."
         buttonText="Register for Singapore"
+        // eslint-disable-next-line
         onButtonClick={() => alert(alertText)}
       />
     </main>
