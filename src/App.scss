@@ -3,6 +3,10 @@
 
 $max-page-width: 1170px;
 
+* {
+    box-sizing: border-box;
+}
+
 html,body {
     margin: 0;
     font-size: 16px;
@@ -10,13 +14,16 @@ html,body {
 }
 
 #root {
-    padding: variables.$spacing-md;
-    margin-left: auto;
-    margin-right: auto;
+    margin: variables.$spacing-md auto;
     display: flex;
     align-items: center;
     flex-direction: column;
     max-width: $max-page-width;
+
+    @media (max-width: calc($max-page-width + variables.$spacing-md)) {
+        margin-left: variables.$spacing-md;
+        margin-right: variables.$spacing-md;
+    }
 }
 
 .app__header {
@@ -32,7 +39,7 @@ html,body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: min-content min-content;
-    gap: calc(variables.$spacing-xl);
+    gap: variables.$spacing-xl;
 }
 
 .app__main-promo {

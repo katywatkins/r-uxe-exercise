@@ -21,7 +21,7 @@
     }
 
     @media (min-width: variables.$bp-md) {
-        width: 52.8%; // magic number hack for vertical alignment between cards, this should be 47% based on the mockup
+        width: 48.7%;
         max-height: unset;
     }
 }
@@ -30,7 +30,7 @@
     padding: variables.$spacing-lg;
     @media (min-width: variables.$bp-md) {
         flex-grow: 1;
-        width: 50%; // magic number hack for vertical alignment between cards, this should be 53% based on the mockup
+        width: 51.3%;
     }
 }
 
